@@ -75,7 +75,7 @@ In the example, each task works in a ping-pong like fashion: task 1 wakes up, ad
     void
     task2_handler(void *arg)
     {
-        struct os_task *t;
+        struct os_task *t;   <====== Why is this code here?  It appears to never be used. 
 
         while (1) {
             /* Wait for semaphore from task1 */
