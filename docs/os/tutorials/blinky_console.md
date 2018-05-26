@@ -90,7 +90,7 @@ init_timer(void)
     /*
      * Initialize the callout for a timer event.
      */
-    os_callout_init(&blinky_callout, os_eventq_dflt_get(),
+    os_callout_funct_init(&blinky_callout, os_eventq_dflt_get(),
                     timer_ev_cb, NULL);
 
     os_callout_reset(&blinky_callout, OS_TICKS_PER_SEC);
